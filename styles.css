@@ -3,7 +3,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { width: 100%; }
 body {
-  font-family: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--ink);
@@ -18,14 +18,14 @@ body {
 :root,
 [data-theme="press"] {
   --bg: #ffffff;
-  --bg-soft: oklch(0.965 0 0);
-  --ink: oklch(0.18 0.006 240);
-  --ink-soft: oklch(0.42 0.008 240);
-  --ink-faint: oklch(0.62 0.006 240);
-  --rule: oklch(0.86 0.005 235);
-  --accent: oklch(0.42 0.08 205);
-  --accent-soft: oklch(0.42 0.08 205 / 0.10);
-  --tag-bg: oklch(0.94 0 0);
+  --bg-soft: #F2F4F8;
+  --ink: #1A2540;
+  --ink-soft: #3D4660;
+  --ink-faint: #858DA1;
+  --rule: rgba(26, 37, 64, 0.10);
+  --accent: #2C6975;
+  --accent-soft: rgba(44, 105, 117, 0.10);
+  --tag-bg: #F2F4F8;
 }
 [data-theme="cool"] {
   --bg: oklch(0.985 0.004 240);
@@ -76,13 +76,13 @@ body {
 
 /* ── Typography ─────────────────────────────────────────────── */
 .serif {
-  font-family: 'Newsreader', 'Iowan Old Style', 'Georgia', serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 400;
   font-style: normal;
   letter-spacing: -0.005em;
 }
 .display {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 300;
   letter-spacing: -0.02em;
   line-height: 1.02;
@@ -178,7 +178,7 @@ section + section { border-top: 1px solid var(--rule); }
   gap: 24px;
 }
 .section-head h2 {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 400;
   font-size: 32px;
   letter-spacing: -0.015em;
@@ -199,18 +199,18 @@ section + section { border-top: 1px solid var(--rule); }
   align-items: center;
 }
 .hero-editorial .hero-copy h1 {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 300;
-  font-size: clamp(30px, 4vw, 56px);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: clamp(34px, 4.4vw, 64px);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
   text-wrap: balance;
   margin-bottom: 32px;
 }
 .hero-editorial .hero-copy h1 em {
   font-style: italic;
   color: var(--accent);
-  font-weight: 300;
+  font-weight: 500;
   white-space: nowrap;
 }
 .hero-editorial .hero-tag {
@@ -319,7 +319,7 @@ section + section { border-top: 1px solid var(--rule); }
   padding-top: 40px;
 }
 .hero-index .name {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 300;
   font-size: clamp(64px, 10vw, 128px);
   line-height: 0.95;
@@ -388,7 +388,7 @@ section + section { border-top: 1px solid var(--rule); }
 }
 .hero-split .right .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
 .hero-split h1 {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 300;
   font-size: clamp(40px, 5.5vw, 72px);
   line-height: 1;
@@ -425,7 +425,7 @@ section + section { border-top: 1px solid var(--rule); }
 }
 .bio-grid .label { padding-top: 4px; }
 .bio-grid p {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 22px;
   line-height: 1.45;
   color: var(--ink);
@@ -469,7 +469,7 @@ section + section { border-top: 1px solid var(--rule); }
   font-family: 'JetBrains Mono', monospace;
 }
 .themes-cards .card h3 {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 400;
   font-size: 24px;
   letter-spacing: -0.012em;
@@ -503,7 +503,7 @@ section + section { border-top: 1px solid var(--rule); }
   margin-bottom: 12px;
 }
 .themes-prose .item h3 {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 400;
   font-size: 26px;
   letter-spacing: -0.015em;
@@ -532,7 +532,7 @@ section + section { border-top: 1px solid var(--rule); }
 .themes-list .row:hover { background: var(--bg-soft); }
 .themes-list .row .num { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-faint); }
 .themes-list .row h3 {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 400;
   font-size: 19px;
   letter-spacing: -0.01em;
@@ -605,7 +605,7 @@ section + section { border-top: 1px solid var(--rule); }
   font-size: 10px;
 }
 .pub-box-title {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 400;
   font-size: 26px;
   line-height: 1.16;
@@ -615,7 +615,7 @@ section + section { border-top: 1px solid var(--rule); }
   margin: 0;
 }
 .pub-box-venue {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-style: italic;
   font-size: 15px;
   color: var(--ink-soft);
@@ -726,7 +726,7 @@ section + section { border-top: 1px solid var(--rule); }
   font-weight: 500;
 }
 .pubs-featured .pub-card .title {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 1.2;
@@ -779,7 +779,7 @@ section + section { border-top: 1px solid var(--rule); }
   line-height: 1.5;
 }
 .book .meta .booktitle {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 400;
   font-size: 17px;
   letter-spacing: -0.01em;
@@ -826,7 +826,8 @@ section + section { border-top: 1px solid var(--rule); }
 .site-footer {
   border-top: 1px solid var(--rule);
   padding: 72px 0 56px;
-  background: var(--bg-soft);
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.55);
 }
 .footer-grid {
   display: grid;
@@ -838,35 +839,36 @@ section + section { border-top: 1px solid var(--rule); }
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ink-faint);
+  color: rgba(255, 255, 255, 0.55);
   font-weight: 500;
   margin-bottom: 16px;
 }
 .footer-grid p, .footer-grid li, .footer-grid a {
   font-size: 14px;
   line-height: 1.6;
-  color: var(--ink-soft);
+  color: rgba(255, 255, 255, 0.78);
 }
 .footer-grid .contact-h {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 350;
-  font-size: 28px;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 32px;
   letter-spacing: -0.012em;
-  color: var(--ink);
+  color: #ffffff;
   margin-bottom: 14px;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 .footer-grid ul { list-style: none; }
 .footer-grid li + li { margin-top: 6px; }
-.footer-grid li a:hover { color: var(--accent); }
+.footer-grid li a { transition: color 160ms ease; }
+.footer-grid li a:hover { color: #ffffff; }
 .footer-base {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   font-size: 12px;
-  color: var(--ink-faint);
+  color: rgba(255, 255, 255, 0.45);
   padding-top: 28px;
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
 
@@ -883,11 +885,11 @@ section + section { border-top: 1px solid var(--rule); }
 }
 .page-hero .eyebrow { margin-bottom: 16px; }
 .page-hero h1 {
-  font-family: 'Newsreader', Georgia, serif;
-  font-weight: 300;
-  font-size: clamp(40px, 5.4vw, 72px);
-  line-height: 1.04;
-  letter-spacing: -0.022em;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
   text-wrap: balance;
   margin-bottom: 28px;
 }
@@ -907,7 +909,7 @@ section + section { border-top: 1px solid var(--rule); }
   align-items: start;
 }
 .bio-prose .text p {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 21px;
   line-height: 1.55;
   font-weight: 350;
@@ -1026,7 +1028,7 @@ section + section { border-top: 1px solid var(--rule); }
   top: 96px;
 }
 .news-archive .year-block .year-label {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: clamp(56px, 6vw, 88px);
   line-height: 0.95;
   font-weight: 300;
@@ -1091,7 +1093,7 @@ section + section { border-top: 1px solid var(--rule); }
   letter-spacing: 0.06em;
 }
 .news-archive .year-block .item .what {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 22px;
   line-height: 1.35;
   letter-spacing: -0.012em;
@@ -1122,7 +1124,7 @@ section + section { border-top: 1px solid var(--rule); }
   align-items: start;
 }
 .contact-layout .primary p {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 22px;
   line-height: 1.45;
   color: var(--ink);
@@ -1133,7 +1135,7 @@ section + section { border-top: 1px solid var(--rule); }
 }
 .contact-layout .primary .email-row {
   display: block;
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 34px;
   letter-spacing: -0.015em;
   color: var(--accent);

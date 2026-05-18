@@ -28,7 +28,7 @@ function HeroEditorial({ photoTreatment }) {
             Working at the crossroads of<br />
             <em>policy and management</em><br />
             and the <em>cities, environments,</em><br />
-            and <em style={{ fontFamily: "Newsreader" }}>technologies</em> they shape.
+            and <em style={{ fontFamily: "Cormorant Garamond" }}>technologies</em> they shape.
           </h1>
           <p className="hero-tag">
             Two decades of research at the seam between public policy, environmental
