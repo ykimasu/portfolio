@@ -30,10 +30,10 @@ function HeroEditorial({ photoTreatment }) {
             and the <em>cities, environments,</em><br />
             and <em style={{ fontFamily: "Cormorant Garamond" }}>technologies</em> they shape.
           </h1>
-          <p className="hero-tag">
-            Two decades of research at the seam between public policy, environmental
-            justice, and the computational methods that make complex urban systems
-            legible.
+          <p className="hero-tag">Two decades of research at the seam between public policy, urban environmental issues, and the computational methods that make complex urban systems legible.
+
+
+
           </p>
           <div className="hero-meta">
             <div className="row"><span className="k">Role</span><span>Professor, School of Public Affairs</span></div>
@@ -309,19 +309,19 @@ function PublicationsSection({ pubsStyle }) {
                 <span className="pub-box-tag">{p.tag}</span>
               </header>
               <h3 className="pub-box-title">
-                {p.url
-                  ? <a href={p.url} target="_blank" rel="noopener noreferrer">{p.title}</a>
-                  : p.title}
+                {p.url ?
+              <a href={p.url} target="_blank" rel="noopener noreferrer">{p.title}</a> :
+              p.title}
               </h3>
               <div className="pub-box-venue">{p.venue}</div>
               <p className="pub-box-abstract">{p.abstract}</p>
               <div className="pub-box-foot">
                 <span className="pub-box-authors">{p.authors.join(' · ')}</span>
-                {p.url && (
-                  <a className="pub-box-link" href={p.url} target="_blank" rel="noopener noreferrer">
+                {p.url &&
+              <a className="pub-box-link" href={p.url} target="_blank" rel="noopener noreferrer">
                     Read on publisher&nbsp;↗
                   </a>
-                )}
+              }
               </div>
             </article>
           )}
@@ -484,7 +484,6 @@ function App() {
     <div className="page">
       <SharedHeader activePage="home" />
       <Hero layout={t.layout} photoTreatment={t.photoTreatment} />
-      <Bio />
       <ResearchSection themesStyle={t.themesStyle} />
       <PublicationsSection pubsStyle={t.pubsStyle} />
       <SharedFooter />
