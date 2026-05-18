@@ -308,10 +308,21 @@ function PublicationsSection({ pubsStyle }) {
                 <span className="pub-box-year">{p.year}</span>
                 <span className="pub-box-tag">{p.tag}</span>
               </header>
-              <h3 className="pub-box-title">{p.title}</h3>
+              <h3 className="pub-box-title">
+                {p.url
+                  ? <a href={p.url} target="_blank" rel="noopener noreferrer">{p.title}</a>
+                  : p.title}
+              </h3>
               <div className="pub-box-venue">{p.venue}</div>
               <p className="pub-box-abstract">{p.abstract}</p>
-              <div className="pub-box-authors">{p.authors.join(' · ')}</div>
+              <div className="pub-box-foot">
+                <span className="pub-box-authors">{p.authors.join(' · ')}</span>
+                {p.url && (
+                  <a className="pub-box-link" href={p.url} target="_blank" rel="noopener noreferrer">
+                    Read on publisher&nbsp;↗
+                  </a>
+                )}
+              </div>
             </article>
           )}
         </div>

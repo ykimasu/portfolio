@@ -58,6 +58,7 @@ window.SITE_DATA = {
         'Administrative decision‑making with generative AI: The challenge of epistemic boundedness',
       venue: 'Administration & Society',
       tag: 'GenAI',
+      url: 'https://journals.sagepub.com/doi/10.1177/00953997251409156',
       abstract:
         'Examines how administrators must reason about and adopt generative AI tools — and where the epistemic limits of those tools press against the structure of public decision‑making. Sets out a framework for thinking about epistemic boundedness in AI‑assisted governance, and what it implies for accountability and judgment in administrative practice.',
     },
@@ -68,6 +69,7 @@ window.SITE_DATA = {
         'Connecting park access and use data for equitable environmental planning',
       venue: 'Environment and Planning B: Urban Analytics and City Science',
       tag: 'Green space',
+      url: 'https://journals.sagepub.com/doi/10.1177/23998083251366735',
       abstract:
         'Combines administrative data on park access with mobility‑derived visit patterns to expose where formal access metrics diverge from actual use. Argues that equitable environmental planning depends on bringing both supply and demand signals into the same analytical frame — and shows what this reveals about Phoenix‑area neighborhoods.',
     },
