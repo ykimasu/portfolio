@@ -230,17 +230,34 @@ window.SITE_DATA = {
     'Graduate Faculty, Complex Adaptive Systems Science, ASU',
   ],
 
+  /* Interactive projects & tools — homepage Projects section */
+  projects: [
+    {
+      n: '01',
+      kind: 'Interactive dashboard',
+      title: 'Green Space Access and Use in Phoenix, AZ',
+      blurb:
+        'A choropleth + companion-chart dashboard for exploring how park access and demographic structure vary across Phoenix-area census block groups. Built to accompany ongoing work on green-space equity in desert cities.',
+      image: 'assets/project-greenspace-phoenix.png',
+      url: 'https://ykimasu.shinyapps.io/phx-green-space/',
+      cta: 'Open dashboard',
+      meta: 'R Shiny · ParkServe · ACS 2015–2019',
+    },
+    {
+      n: '02',
+      kind: 'GenAI prototype',
+      title: 'Phoenix CAP Policy Analysis System',
+      blurb:
+        'A multi-agent GenAI tool that both generates and evaluates climate policy ideas, grounded in Phoenix’s 2021 Climate Action Plan. Up to five specialized agents assess feasibility, equity, regulatory alignment, and community voice — and return an exportable, CAP-grounded summary.',
+      image: 'assets/project-phoenix-cap.png',
+      url: 'https://phoenix-cap-policy-analysis-1.onrender.com/',
+      cta: 'Launch the tool',
+      meta: 'CTDS · School of Public Affairs, ASU',
+    },
+  ],
+
   /* Full publications — used by publications.html */
   allPublications: [
-    /* Working papers */
-    { year: 'working paper', type: 'working', authors: ['Kim, Y.', 'Cho, H.C.', 'Kim, J.', 'Howell, A.', 'Corley, E.A.', 'Larson, K.'], title: 'Desert blind: Correcting "green bias" in MLLM-based urban park quality assessment.', venue: '', tag: 'GenAI' },
-    { year: 'under review', type: 'working', authors: ['Kim, Y.', 'Won, Y.', 'Kim, J.', 'Stuhlmacher, M.', 'Corley, E.', 'Chun, Y.'], title: 'Realizing urban park benefits: The decoupled link between access and use.', venue: 'npj Urban Sustainability', tag: 'Green space' },
-    { year: 'submitted', type: 'working', authors: ['Cho, H.C.', 'Kim, H.', 'Kim, Y.', 'Howell, A.', 'Corley, E.', 'Cha, J.'], title: 'Can large language models match policy experts? Workflow design and framing in assessing climate equity.', venue: 'Government Information Quarterly', tag: 'GenAI' },
-    { year: 'submitted', type: 'working', authors: ['Cho, H.C.', 'Kim, Y.', 'Han, K.S.', 'Cha, J.'], title: 'Large language models vs. human coders: Evaluating equity in U.S. climate action plans.', venue: 'International Journal of Qualitative Research', tag: 'GenAI' },
-    { year: 'in prep', type: 'working', authors: ['Kim, J.', 'Cho, H.C.', 'Kim, Y.'], title: 'Policy design logic of nature-based solutions in local government plans.', venue: '', tag: 'Equity' },
-    { year: 'in prep', type: 'working', authors: ['Kim, J.', 'Kim, Y.', 'Corley, E.', 'Cho, H.C.'], title: 'From text to context using language AI: Urban sustainability policy design in local government plans.', venue: '', tag: 'GenAI' },
-    { year: 'submitted', type: 'working', authors: ['Kim, Y.', 'Eckerd, A.'], title: 'From retrospective to prospective: Computational approach to enhanced decision-making.', venue: 'New Directions for Evaluation', tag: 'Computational' },
-
     /* Peer-reviewed articles */
     { year: '2026', type: 'article', authors: ['Howell, A.', 'Wu, N.', 'Shamistha, B-S.', 'Kim, Y.', 'Sun, Q.C.'], title: 'MLLMs, multimodal large language models, street view images and urban policy-intelligence: recovering the sustainability effects of redlining.', venue: 'npj Urban Sustainability', tag: 'GenAI' },
     { year: '2026', type: 'article', authors: ['Kim, Y.', 'Kim, J.', 'Kim, T.W.', 'Cho, H.C.'], title: 'Administrative decision-making with generative AI: The challenge of epistemic boundedness.', venue: 'Administration & Society, 58(2), 284-304', tag: 'GenAI' },

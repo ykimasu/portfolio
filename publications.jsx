@@ -61,26 +61,17 @@ function BooksRow() {
 }
 
 const TAGS = ['All', 'Green space', 'Equity', 'Public health', 'GenAI', 'Computational'];
-const TYPES = [
-  { value: 'all', label: 'All' },
-  { value: 'article', label: 'Peer‑reviewed' },
-  { value: 'working', label: 'Working / in review' },
-];
 
 function PublicationsList() {
   const [tag, setTag] = React.useState('All');
-  const [type, setType] = React.useState('all');
 
   const filtered = D.allPublications.filter((p) => {
-    if (type !== 'all' && p.type !== type) return false;
     if (tag !== 'All' && p.tag !== tag) return false;
     return true;
   });
 
   const countFor = (t) =>
-    D.allPublications.filter((p) => (type === 'all' || p.type === type) && (t === 'All' || p.tag === t)).length;
-  const countForType = (tp) =>
-    D.allPublications.filter((p) => (tag === 'All' || p.tag === tag) && (tp === 'all' || p.type === tp)).length;
+    D.allPublications.filter((p) => (t === 'All' || p.tag === t)).length;
 
   return (
     <section data-screen-label="Publications List">
@@ -88,16 +79,6 @@ function PublicationsList() {
         <div className="section-head">
           <h2>All publications</h2>
           <div className="meta mono">{filtered.length} of {D.allPublications.length}</div>
-        </div>
-
-        <div className="filter-bar">
-          <span className="label">Type</span>
-          {TYPES.map((t) => (
-            <button key={t.value} className="chip" data-active={type === t.value}
-                    onClick={() => setType(t.value)}>
-              {t.label}<span className="count">{countForType(t.value)}</span>
-            </button>
-          ))}
         </div>
 
         <div className="filter-bar">
@@ -134,6 +115,31 @@ function PublicationsList() {
   );
 }
 
+function ResearchThemes() {
+  return (
+    <section data-screen-label="Research">
+      <div className="container">
+        <div className="section-head">
+          <h2>Research themes</h2>
+          <div className="meta">{String(D.themes.length).padStart(2, '0')} / themes</div>
+        </div>
+        <div className="themes-cards">
+          {D.themes.map((t) => (
+            <div className="card" key={t.n}>
+              <div className="idx">{t.n} / RESEARCH</div>
+              <h3 className="serif">{t.title}</h3>
+              <p>{t.blurb}</p>
+              <div className="keywords">
+                {t.kw.map((k) => <span key={k}>{k}</span>)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function PublicationsApp() {
   const [theme, setTheme] = usePersistedTheme();
   return (
@@ -141,6 +147,7 @@ function PublicationsApp() {
       <SharedHeader activePage="publications" />
       <PageHero />
       <BooksRow />
+      <ResearchThemes />
       <PublicationsList />
       <SharedFooter />
       <MiniTweaks theme={theme} setTheme={setTheme} />

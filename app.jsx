@@ -395,6 +395,55 @@ function News() {
 /* ── Footer ─────────────────────────────────────────────────────── */
 /* Now lives in shared.jsx as SharedFooter. */
 
+/* ── Projects & Tools ───────────────────────────────────────────── */
+function ProjectsSection() {
+  const items = (D.projects || []);
+  if (!items.length) return null;
+  return (
+    <section data-screen-label="Projects">
+      <div className="container">
+        <div className="section-head">
+          <h2>Projects & tools</h2>
+          <div className="meta">{String(items.length).padStart(2, '0')} / interactive</div>
+        </div>
+        <div className="projects-list">
+          {items.map((p, i) => (
+            <article className="project-row" key={i}>
+              <a
+                className="project-thumb"
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={p.title}
+              >
+                {p.image
+                  ? <img src={p.image} alt="" />
+                  : <span className="project-thumb-empty">Add a screenshot</span>}
+              </a>
+              <div className="project-body">
+                <div className="project-head">
+                  <span className="project-num">{`№\u00A0${p.n}`}</span>
+                  <span className="project-kind">{p.kind}</span>
+                </div>
+                <h3 className="project-title">
+                  <a href={p.url} target="_blank" rel="noopener noreferrer">{p.title}</a>
+                </h3>
+                <p className="project-blurb">{p.blurb}</p>
+                <div className="project-foot">
+                  <span className="project-meta">{p.meta}</span>
+                  <a className="project-cta" href={p.url} target="_blank" rel="noopener noreferrer">
+                    {p.cta || 'Visit'}&nbsp;↗
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ── Tweaks Panel ───────────────────────────────────────────────── */
 function Tweaks({ t, setTweak }) {
   return (
@@ -484,8 +533,8 @@ function App() {
     <div className="page">
       <SharedHeader activePage="home" />
       <Hero layout={t.layout} photoTreatment={t.photoTreatment} />
-      <ResearchSection themesStyle={t.themesStyle} />
       <PublicationsSection pubsStyle={t.pubsStyle} />
+      <ProjectsSection />
       <SharedFooter />
       <Tweaks t={t} setTweak={setTweak} />
     </div>);
