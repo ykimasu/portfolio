@@ -46,7 +46,8 @@ function SharedFooter() {
           <div>
             <h4>ETHOS</h4>
             <div className="contact-h">
-              <em>“Education is not preparation for life; education is life itself.”</em><br />
+              <em>“Education is not preparation for life;
+education is life itself.”</em><br />
               <span className="attribution">— John Dewey</span>
             </div>
             <p>
@@ -66,8 +67,7 @@ function SharedFooter() {
           <div>
             <h4>Affiliations</h4>
             <ul>
-              {D.affiliations.map((a, i) =>
-              <li key={i}>{a}</li>
+              {D.affiliations.map((a, i) => <li key={i}>{a}</li>
               )}
             </ul>
           </div>
