@@ -13,12 +13,12 @@ const PHOTO_KEY = 'ykim.photoTreatment';
 
 function SharedHeader({ activePage }) {
   const items = [
-    { id: 'home', label: 'Home', href: 'index.html' },
-    { id: 'about', label: 'About', href: 'about.html' },
-    { id: 'publications', label: 'Publications', href: 'publications.html' },
-    { id: 'news', label: 'News', href: 'news.html' },
-    { id: 'contact', label: 'Contact', href: 'contact.html' },
-  ];
+  { id: 'home', label: 'Home', href: 'index.html' },
+  { id: 'about', label: 'About', href: 'about.html' },
+  { id: 'publications', label: 'Publications', href: 'publications.html' },
+  { id: 'news', label: 'News', href: 'news.html' },
+  { id: 'contact', label: 'Contact', href: 'contact.html' }];
+
   return (
     <header className="site-header" data-screen-label="Header">
       <div className="container site-header-inner">
@@ -26,15 +26,15 @@ function SharedHeader({ activePage }) {
           <span className="dot"></span>Yushim Kim
         </a>
         <nav className="site-nav">
-          {items.map((it) => (
-            <a key={it.id} href={it.href} className={activePage === it.id ? 'active' : ''}>
+          {items.map((it) =>
+          <a key={it.id} href={it.href} className={activePage === it.id ? 'active' : ''}>
               {it.label}
             </a>
-          ))}
+          )}
         </nav>
       </div>
-    </header>
-  );
+    </header>);
+
 }
 
 function SharedFooter() {
@@ -44,10 +44,10 @@ function SharedFooter() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <h4>Contact</h4>
+            <h4>ETHOS</h4>
             <div className="contact-h">
-              Open to collaborations,<br />
-              advising inquiries, and talks.
+              <em>“Education is not preparation for life; education is life itself.”</em><br />
+              <span className="attribution">— John Dewey</span>
             </div>
             <p>
               <a href={`mailto:${D.email}`} className="link" style={{ color: 'var(--ink)' }}>
@@ -66,9 +66,9 @@ function SharedFooter() {
           <div>
             <h4>Affiliations</h4>
             <ul>
-              {D.affiliations.map((a, i) => (
-                <li key={i}>{a}</li>
-              ))}
+              {D.affiliations.map((a, i) =>
+              <li key={i}>{a}</li>
+              )}
             </ul>
           </div>
         </div>
@@ -77,8 +77,8 @@ function SharedFooter() {
           <div>Phoenix, AZ</div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 }
 
 /* Minimal Tweaks panel for sub-pages: just theme (and photo if photo is on the page). */
@@ -90,57 +90,57 @@ function MiniTweaks({ theme, setTheme, includePhoto, photoTreatment, setPhotoTre
         label="Theme"
         value={theme}
         options={[
-          { value: 'press', label: 'Press' },
-          { value: 'cool', label: 'Cool' },
-          { value: 'warm', label: 'Warm' },
-        ]}
-        onChange={setTheme}
-      />
+        { value: 'press', label: 'Press' },
+        { value: 'cool', label: 'Cool' },
+        { value: 'warm', label: 'Warm' }]
+        }
+        onChange={setTheme} />
+      
       <TweakRadio
         label="Alt"
         value={theme}
         options={[
-          { value: 'earth', label: 'Earth' },
-          { value: 'mono', label: 'Mono' },
-        ]}
-        onChange={setTheme}
-      />
-      {includePhoto && (
-        <>
+        { value: 'earth', label: 'Earth' },
+        { value: 'mono', label: 'Mono' }]
+        }
+        onChange={setTheme} />
+      
+      {includePhoto &&
+      <>
           <TweakSection label="Photo" />
           <TweakRadio
-            label="Style"
-            value={photoTreatment}
-            options={[
-              { value: 'color', label: 'Color' },
-              { value: 'duotone', label: 'Duotone' },
-            ]}
-            onChange={setPhotoTreatment}
-          />
+          label="Style"
+          value={photoTreatment}
+          options={[
+          { value: 'color', label: 'Color' },
+          { value: 'duotone', label: 'Duotone' }]
+          }
+          onChange={setPhotoTreatment} />
+        
         </>
-      )}
-    </TweaksPanel>
-  );
+      }
+    </TweaksPanel>);
+
 }
 
 /* Read/write helpers for sub-pages. */
 function usePersistedTheme() {
   const [theme, setTheme] = React.useState(() => {
-    try { return localStorage.getItem(THEME_KEY) || 'press'; } catch (e) { return 'press'; }
+    try {return localStorage.getItem(THEME_KEY) || 'press';} catch (e) {return 'press';}
   });
   React.useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
-    try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
+    try {localStorage.setItem(THEME_KEY, theme);} catch (e) {}
   }, [theme]);
   return [theme, setTheme];
 }
 
 function usePersistedPhoto() {
   const [pt, setPt] = React.useState(() => {
-    try { return localStorage.getItem(PHOTO_KEY) || 'color'; } catch (e) { return 'color'; }
+    try {return localStorage.getItem(PHOTO_KEY) || 'color';} catch (e) {return 'color';}
   });
   React.useEffect(() => {
-    try { localStorage.setItem(PHOTO_KEY, pt); } catch (e) {}
+    try {localStorage.setItem(PHOTO_KEY, pt);} catch (e) {}
   }, [pt]);
   return [pt, setPt];
 }
@@ -150,5 +150,5 @@ Object.assign(window, {
   SharedFooter,
   MiniTweaks,
   usePersistedTheme,
-  usePersistedPhoto,
+  usePersistedPhoto
 });
