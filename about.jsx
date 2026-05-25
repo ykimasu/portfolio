@@ -21,19 +21,10 @@ function LongBio({ photoTreatment }) {
   return (
     <section data-screen-label="Long Bio">
       <div className="container">
-        <div className="bio-prose">
+        <div className="bio-prose bio-prose--text-only">
           <div className="text">
             {D.longBio.map((p, i) => <p key={i}>{p}</p>)}
           </div>
-          <aside className="side">
-            <div className="photo" data-treatment={photoTreatment}>
-              <img src="assets/yushim.jpg" alt="Yushim Kim" />
-            </div>
-            <div className="caption">
-              Yushim Kim · Phoenix, Arizona<br />
-              Photo by Arizona State University
-            </div>
-          </aside>
         </div>
       </div>
     </section>

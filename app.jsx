@@ -41,22 +41,12 @@ function HeroEditorial({ photoTreatment }) {
             <div className="row"><span className="k">Based in</span><span>Phoenix, Arizona</span></div>
           </div>
         </div>
-        <div className="hero-books" data-treatment={photoTreatment}>
-          <div className="book-stack">
-            <a href="publications.html" className="book b-back" aria-label="Rethinking Environmental Justice in Sustainable Cities (2015)">
-              <img src="assets/book-rethinking.png" alt="" />
-            </a>
-            <a href="publications.html" className="book b-mid" aria-label="Green Gentrification and Environmental Injustice (2024)">
-              <img src="assets/book-green-gentrification.png" alt="" />
-            </a>
-            <a href="publications.html" className="book b-front" aria-label="Computational Approaches to Policy Challenges (2026)">
-              <img src="assets/book-computational.png" alt="" />
-            </a>
-          </div>
-          <div className="books-caption">
-            <span className="eyebrow">Selected books</span>
+        <div className="hero-photo" data-treatment={photoTreatment}>
+          <img src="assets/yushim.jpg" alt="Yushim Kim" />
+          <div className="hero-photo-caption">
+            <span className="lbl">Phoenix · 2026</span>
             <span className="rule" aria-hidden="true"></span>
-            <span>Three volumes &nbsp;·&nbsp; 2015 — 2026</span>
+            <span>Photo · Arizona State University</span>
           </div>
         </div>
       </div>

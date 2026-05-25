@@ -256,6 +256,26 @@ section + section { border-top: 1px solid var(--rule); }
 .hero-photo[data-treatment="duotone"] {
   background: var(--accent-soft);
 }
+.hero-photo-caption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.hero-photo-caption .lbl {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+.hero-photo-caption .rule {
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
 
 /* ── HERO: book stack (in place of portrait) ────────────────── */
 .hero-books {
@@ -1083,6 +1103,10 @@ section + section { border-top: 1px solid var(--rule); }
   gap: 96px;
   align-items: start;
 }
+.bio-prose--text-only {
+  grid-template-columns: 1fr;
+}
+.bio-prose--text-only .text p { max-width: none; }
 .bio-prose .text p {
   font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 21px;
