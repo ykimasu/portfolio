@@ -39,6 +39,19 @@ function HeroEditorial({ photoTreatment }) {
             <div className="row"><span className="k">Role</span><span>Professor, School of Public Affairs</span></div>
             <div className="row"><span className="k">Methods</span><span>Agent‑based modeling · spatial analysis · LLMs · networks</span></div>
             <div className="row"><span className="k">Based in</span><span>Phoenix, Arizona</span></div>
+            <div className="row">
+              <span className="k">Overview</span>
+              <span>
+                <a
+                  className="hero-meta-link"
+                  href="https://ykimasu.github.io/pitchdeck/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Research pitch deck&nbsp;↗
+                </a>
+              </span>
+            </div>
           </div>
         </div>
         <div className="hero-photo" data-treatment={photoTreatment}>

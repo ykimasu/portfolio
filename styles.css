@@ -236,6 +236,23 @@ section + section { border-top: 1px solid var(--rule); }
   text-transform: uppercase;
   padding-top: 3px;
 }
+.hero-editorial .hero-meta .hero-meta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid color-mix(in oklch, var(--accent) 25%, transparent);
+  border-radius: 2px;
+  font-weight: 500;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+.hero-editorial .hero-meta .hero-meta-link:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
 
 .hero-photo {
   position: relative;
