@@ -1134,6 +1134,7 @@ section + section { border-top: 1px solid var(--rule); }
   text-wrap: pretty;
   max-width: 56ch;
 }
+.bio-prose--text-only .text p { max-width: none; }
 .bio-prose .text p:last-child { margin-bottom: 0; }
 .bio-prose .text p em { font-style: italic; color: var(--ink); }
 .bio-prose .side .photo {
@@ -1462,4 +1463,18 @@ section + section { border-top: 1px solid var(--rule); }
   letter-spacing: 0.04em;
   line-height: 1.5;
   margin-bottom: 36px;
+}
+
+/* ── Projects page: research statement ─────────────────────── */
+.statement .container { padding-top: 8px; }
+.statement-block { display: grid; grid-template-columns: 300px 1fr; gap: 48px; padding: 44px 0; border-top: 1px solid var(--rule); align-items: start; }
+.statement-block:first-child { border-top: none; padding-top: 8px; }
+.statement-side { position: sticky; top: 96px; }
+.statement-num { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .12em; color: var(--accent); margin-bottom: 12px; }
+.statement-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 30px; line-height: 1.15; font-weight: 600; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.statement-text p { font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-size: 21px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 20px; max-width: 62ch; text-wrap: pretty; }
+.statement-text p:last-child { margin-bottom: 0; }
+@media (max-width: 860px) {
+  .statement-block { grid-template-columns: 1fr; gap: 20px; }
+  .statement-side { position: static; }
 }

@@ -15,6 +15,7 @@ function SharedHeader({ activePage }) {
   const items = [
   { id: 'home', label: 'Home', href: 'index.html' },
   { id: 'about', label: 'About', href: 'about.html' },
+  { id: 'projects', label: 'Projects', href: 'projects.html' },
   { id: 'publications', label: 'Publications', href: 'publications.html' },
   { id: 'news', label: 'News', href: 'news.html' },
   { id: 'contact', label: 'Contact', href: 'contact.html' }];
