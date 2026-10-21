@@ -162,6 +162,18 @@ window.SITE_DATA = {
   news: [
     {
       date: '2026',
+      kind: 'Talk',
+      text: (
+        <>
+          Talk at the APPAM 2026 Fall Research Conference, Boston: <em>How
+          workflow design and political framing shape LLM assessments of government
+          information — evidence from equity assessments of climate action plans in
+          55 U.S. cities.</em>
+        </>
+      ),
+    },
+    {
+      date: '2026',
       kind: 'New book',
       text: (
         <>
