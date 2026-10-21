@@ -15,12 +15,11 @@ function PageHero() {
   const articles = D.allPublications.filter((p) => p.type === 'article').length;
   const working = D.allPublications.filter((p) => p.type === 'working').length;
   return (
-    <section className="page-hero" data-screen-label="Page Hero">
+    <section className="page-hero page-hero--wide" data-screen-label="Page Hero">
       <div className="container">
         <div className="eyebrow">Publications</div>
         <h1 className="display">
-          {articles}+ peer‑reviewed articles,<br />
-          <em>3 books</em>
+          {articles}+ peer‑reviewed articles, <em>3 books</em>
         </h1>
         <p className="lede">
           A complete record of journal articles, books, conference proceedings, and
