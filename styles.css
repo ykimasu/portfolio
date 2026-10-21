@@ -1112,6 +1112,8 @@ section + section { border-top: 1px solid var(--rule); }
   line-height: 1.5;
   max-width: 58ch;
 }
+.page-hero--wide .lede { max-width: none; }
+.page-hero--wide h1 { text-wrap: wrap; }
 
 /* ── About: long bio layout ────────────────────────────────── */
 .bio-prose {

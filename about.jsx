@@ -4,13 +4,13 @@ const D = window.SITE_DATA;
 
 function PageHero() {
   return (
-    <section className="page-hero" data-screen-label="Page Hero">
+    <section className="page-hero page-hero--wide" data-screen-label="Page Hero">
       <div className="container">
         <div className="eyebrow">About</div>
-        <h1 className="display">A scholar at the intersection<br />of <em>policy</em> and <em>complexity.</em></h1>
+        <h1 className="display">A scholar at the intersection of <em>policy</em> and <em>complexity.</em></h1>
         <p className="lede">
           Yushim Kim is a Professor in the School of Public Affairs at Arizona State
-          University, where she has been on faculty since 2007.
+          University.
         </p>
       </div>
     </section>
