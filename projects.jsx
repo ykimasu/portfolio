@@ -4,10 +4,10 @@ const D = window.SITE_DATA;
 
 function PageHero() {
   return (
-    <section className="page-hero" data-screen-label="Page Hero">
+    <section className="page-hero page-hero--wide" data-screen-label="Page Hero">
       <div className="container">
         <div className="eyebrow">Projects Explained</div>
-        <h1 className="display">What becomes <em>governable</em><br />when it becomes <em>measurable.</em></h1>
+        <h1 className="display">What becomes <em>governable</em> when it becomes <em>measurable.</em></h1>
         <p className="lede">
           Two projects on how new data and new tools change what government can see, and what
           follows once it can.
