@@ -145,8 +145,8 @@ function PublicationsApp() {
     <div className="page">
       <SharedHeader activePage="publications" />
       <PageHero />
-      <BooksRow />
       <ResearchThemes />
+      <BooksRow />
       <PublicationsList />
       <SharedFooter />
       <MiniTweaks theme={theme} setTheme={setTheme} />
