@@ -4,10 +4,10 @@ const D = window.SITE_DATA;
 
 function PageHero() {
   return (
-    <section className="page-hero" data-screen-label="Page Hero">
+    <section className="page-hero page-hero--wide" data-screen-label="Page Hero">
       <div className="container">
         <div className="eyebrow">News & updates</div>
-        <h1 className="display">Recent <em>activity,</em><br />talks, and <em>milestones.</em></h1>
+        <h1 className="display">Recent <em>activity,</em> talks, and <em>milestones.</em></h1>
         <p className="lede">
           Books, awards, talks, and grants — chronologically. Most recent first.
         </p>
