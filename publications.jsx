@@ -145,7 +145,6 @@ function PublicationsApp() {
     <div className="page">
       <SharedHeader activePage="publications" />
       <PageHero />
-      <ResearchThemes />
       <BooksRow />
       <PublicationsList />
       <SharedFooter />
