@@ -138,8 +138,8 @@ function ProjectsApp() {
     <div className="page">
       <SharedHeader activePage="projects" />
       <PageHero />
-      <Statement />
       <ProjectsList />
+      <Statement />
       <SharedFooter />
       <MiniTweaks theme={theme} setTheme={setTheme} />
     </div>
