@@ -36,8 +36,6 @@ function HeroEditorial({ photoTreatment }) {
 
           </p>
           <div className="hero-meta">
-            <div className="row"><span className="k">Role</span><span>Professor, School of Public Affairs</span></div>
-            <div className="row"><span className="k">Based in</span><span>Phoenix, Arizona</span></div>
             <div className="row">
               <span className="k">Overview</span>
               <span>
